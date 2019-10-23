@@ -19,11 +19,16 @@ var lockImageSix = $("#lock-image-six")
 var lockImageSeven = $("#lock-image-seven")
 var lockImageEight = $("#lock-image-eight")
 
+var userContent = $(".user-content")
+
 var currentTime = $("#currentTime")
 var $lockButton = $(".lock-image")
 
 var now = moment().format("dddd, MMMM Do YYYY, h:mm a");
 currentTime.text(now)
+var timeStamp = moment().format("H")
+timeStamp = parseInt(timeStamp)
+console.log(typeof (timeStamp))
 
 window.onload = onLoadGrabText()
 
@@ -112,106 +117,69 @@ function onLoadGrabText() {
 
 }
 
+if (timeStamp < 9 || timeStamp > 17) {
+    userContent.css("background-color", "var(--third)")
+}
 
-// var textHolderObj = {
-//     text1: JSON.stringify(inputArray[0]),
-//     text2: inputArray[1]
-// }
+if (timeStamp === 9) {
+    textBoxZero.css("background-color", "var(--fourth)")
 
-// $lockButton2.on("click", function () {
-//     inputArray2 = []
-//     inputArray2.push($userInputRow2.text())
-//     localStorage.setItem("inputArray2", JSON.stringify(inputArray2))
-//     $lockButton1.attr("src", "assets/padlock.png")
-// })
-// $lockButton2.on("click", function () {
-//     inputArray2 = []
-//     inputArray2.push($userInputRow2.text())
-//     localStorage.setItem("inputArray2", JSON.stringify(inputArray2))
-//     $lockButton1.attr("src", "assets/padlock.png")
-// })
-// $lockButton2.on("click", function () {
-//     inputArray2 = []
-//     inputArray2.push($userInputRow2.text())
-//     localStorage.setItem("inputArray2", JSON.stringify(inputArray2))
-//     $lockButton1.attr("src", "assets/padlock.png")
-// })
-// $lockButton2.on("click", function () {
-//     inputArray2 = []
-//     inputArray2.push($userInputRow2.text())
-//     localStorage.setItem("inputArray2", JSON.stringify(inputArray2))
-//     $lockButton1.attr("src", "assets/padlock.png")
-// })
-// $lockButton2.on("click", function () {
-//     inputArray2 = []
-//     inputArray2.push($userInputRow2.text())
-//     localStorage.setItem("inputArray2", JSON.stringify(inputArray2))
-//     $lockButton1.attr("src", "assets/padlock.png")
-// })
-// $lockButton2.on("click", function () {
-//     inputArray2 = []
-//     inputArray2.push($userInputRow2.text())
-//     localStorage.setItem("inputArray2", JSON.stringify(inputArray2))
-//     $lockButton1.attr("src", "assets/padlock.png")
-// })
-// $lockButton2.on("click", function () {
-//     inputArray2 = []
-//     inputArray2.push($userInputRow2.text())
-//     localStorage.setItem("inputArray2", JSON.stringify(inputArray2))
-//     $lockButton1.attr("src", "assets/padlock.png")
-// })
-// $lockButton2.on("click", function () {
-//     inputArray2 = []
-//     inputArray2.push($userInputRow2.text())
-//     localStorage.setItem("inputArray2", JSON.stringify(inputArray2))
-//     $lockButton1.attr("src", "assets/padlock.png")
-// })
+} else if (timeStamp === 10) {
+    textBoxZero.css("background-color", "var(--secondary)")
+    textBoxOne.css("background-color", "var(--fourth)")
+} else if (timeStamp === 11) {
+    textBoxZero.css("background-color", "var(--secondary)")
+    textBoxOne.css("background-color", "var(--secondary)")
+    textBoxTwo.css("background-color", "var(--fourth)")
 
-// function onload() {
-//     $userInputRow1.text(JSON.parse(localStorage.getItem("inputArray1")))
-//     if ($userInputRow1.text !== "") {
-//         $lockButton1.attr("src", "assets/padlock.png")
-//     }
+} else if (timeStamp === 12) {
+    textBoxZero.css("background-color", "var(--secondary)")
+    textBoxOne.css("background-color", "var(--secondary)")
+    textBoxTwo.css("background-color", "var(--secondary)")
+    textBoxThree.css("background-color", "var(--fourth)")
 
-//     $userInputRow2.text(JSON.parse(localStorage.getItem("inputArray2")))
-//     if ($userInputRow2.text !== "") {
-//         $lockButton2.attr("src", "assets/padlock.png")
-//     }
+} else if (timeStamp === 13) {
+    textBoxZero.css("background-color", "var(--secondary)")
+    textBoxOne.css("background-color", "var(--secondary)")
+    textBoxTwo.css("background-color", "var(--secondary)")
+    textBoxThree.css("background-color", "var(--secondary)")
+    textBoxFour.css("background-color", "var(--fourth)")
 
-//     $userInputRow3.text(JSON.parse(localStorage.getItem("inputArray3")))
-//     if ($userInputRow3.text !== "") {
-//         $lockButton3.attr("src", "assets/padlock.png")
-//     }
+} else if (timeStamp === 14) {
+    textBoxZero.css("background-color", "var(--secondary)")
+    textBoxOne.css("background-color", "var(--secondary)")
+    textBoxTwo.css("background-color", "var(--secondary)")
+    textBoxThree.css("background-color", "var(--secondary)")
+    textBoxFour.css("background-color", "var(--secondary)")
+    textBoxFive.css("background-color", "var(--fourth)")
 
-//     $userInputRow4.text(JSON.parse(localStorage.getItem("inputArray4")))
-//     if ($userInputRow4.text !== "") {
-//         $lockButton4.attr("src", "assets/padlock.png")
-//     }
+} else if (timeStamp === 15) {
+    textBoxZero.css("background-color", "var(--secondary)")
+    textBoxOne.css("background-color", "var(--secondary)")
+    textBoxTwo.css("background-color", "var(--secondary)")
+    textBoxThree.css("background-color", "var(--secondary)")
+    textBoxFour.css("background-color", "var(--secondary)")
+    textBoxFive.css("background-color", "var(--secondary)")
+    textBoxSix.css("background-color", "var(--fourth)")
 
-//     $userInputRow5.text(JSON.parse(localStorage.getItem("inputArray5")))
-//     if ($userInputRow5.text !== "") {
-//         $lockButton5.attr("src", "assets/padlock.png")
-//     }
-
-//     $userInputRow6.text(JSON.parse(localStorage.getItem("inputArray6")))
-//     if ($userInputRow6.text !== "") {
-//         $lockButton6.attr("src", "assets/padlock.png")
-//     }
-
-//     $userInputRow7.text(JSON.parse(localStorage.getItem("inputArray7")))
-//     if ($userInputRow7.text !== "") {
-//         $lockButton7.attr("src", "assets/padlock.png")
-//     }
-
-//     $userInputRow8.text(JSON.parse(localStorage.getItem("inputArray8")))
-//     if ($userInputRow8.text !== "") {
-//         $lockButton8.attr("src", "assets/padlock.png")
-//     }
-
-//     $userInputRow9.text(JSON.parse(localStorage.getItem("inputArray9")))
-//     if ($userInputRow9.text !== "") {
-//         $lockButton9.attr("src", "assets/padlock.png")
-//     }
-// }
-
+} else if (timeStamp === 16) {
+    textBoxZero.css("background-color", "var(--secondary)")
+    textBoxOne.css("background-color", "var(--secondary)")
+    textBoxTwo.css("background-color", "var(--secondary)")
+    textBoxThree.css("background-color", "var(--secondary)")
+    textBoxFour.css("background-color", "var(--secondary)")
+    textBoxFive.css("background-color", "var(--secondary)")
+    textBoxSix.css("background-color", "var(--secondary)")
+    textBoxSeven.css("background-color", "var(--fourth)")
+} else if (timeStamp === 16) {
+    textBoxZero.css("background-color", "var(--secondary)")
+    textBoxOne.css("background-color", "var(--secondary)")
+    textBoxTwo.css("background-color", "var(--secondary)")
+    textBoxThree.css("background-color", "var(--secondary)")
+    textBoxFour.css("background-color", "var(--secondary)")
+    textBoxFive.css("background-color", "var(--secondary)")
+    textBoxSix.css("background-color", "var(--secondary)")
+    textBoxSeven.css("background-color", "var(--secondary)")
+    textBoxEight.css("background-color", "var(--fourth)")
+}
 
