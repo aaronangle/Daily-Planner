@@ -91,36 +91,37 @@ function onLoadGrabText() {
     textBoxSix.text(JSON.parse(localStorage.getItem("textBoxSix")))
     textBoxSeven.text(JSON.parse(localStorage.getItem("textBoxSeven")))
     textBoxEight.text(JSON.parse(localStorage.getItem("textBoxEight")))
-    if (textBoxZero) {
+
+    if (textBoxZero.text()) {
         lockImageZero.attr("src", "assets/padlock.png")
     }
-    if (textBoxOne) {
+    if (textBoxOne.text()) {
         lockImageOne.attr("src", "assets/padlock.png")
     }
-    if (textBoxTwo) {
+    if (textBoxTwo.text()) {
         lockImageTwo.attr("src", "assets/padlock.png")
     }
-    if (textBoxThree) {
+    if (textBoxThree.text()) {
         lockImageThree.attr("src", "assets/padlock.png")
     }
-    if (textBoxFour) {
+    if (textBoxFour.tet()) {
         lockImageFour.attr("src", "assets/padlock.png")
     }
-    if (textBoxFive) {
+    if (textBoxFive.text()) {
         lockImageFive.attr("src", "assets/padlock.png")
     }
-    if (textBoxSix) {
+    if (textBoxSix.text()) {
         lockImageSix.attr("src", "assets/padlock.png")
     }
-    if (textBoxSeven) {
+    if (textBoxSeven.text()) {
         lockImageSeven.attr("src", "assets/padlock.png")
     }
-    if (textBoxEight) {
+    if (textBoxEight.text()) {
         lockImageEight.attr("src", "assets/padlock.png")
     }
 
 }
-
+console.log(textBoxSeven.text)
 
 // var textHolderObj = {
 //     text1: JSON.stringify(inputArray[0]),
