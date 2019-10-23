@@ -66,6 +66,7 @@ h1{
     margin: auto;
     padding-left: 10px;
     overflow: auto;
+    background-color: var(--third);
     
 }
 .lock{

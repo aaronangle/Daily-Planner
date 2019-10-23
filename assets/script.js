@@ -28,7 +28,7 @@ var now = moment().format("dddd, MMMM Do YYYY, h:mm a");
 currentTime.text(now)
 var timeStamp = moment().format("H")
 timeStamp = parseInt(timeStamp)
-console.log(typeof (timeStamp))
+console.log(timeStamp)
 
 window.onload = onLoadGrabText()
 
@@ -119,14 +119,14 @@ function onLoadGrabText() {
 
 if (timeStamp < 9 || timeStamp > 17) {
     userContent.css("background-color", "var(--third)")
-}
 
-if (timeStamp === 9) {
+} else if (timeStamp === 9) {
     textBoxZero.css("background-color", "var(--fourth)")
 
 } else if (timeStamp === 10) {
     textBoxZero.css("background-color", "var(--secondary)")
     textBoxOne.css("background-color", "var(--fourth)")
+
 } else if (timeStamp === 11) {
     textBoxZero.css("background-color", "var(--secondary)")
     textBoxOne.css("background-color", "var(--secondary)")
@@ -171,6 +171,7 @@ if (timeStamp === 9) {
     textBoxFive.css("background-color", "var(--secondary)")
     textBoxSix.css("background-color", "var(--secondary)")
     textBoxSeven.css("background-color", "var(--fourth)")
+
 } else if (timeStamp === 16) {
     textBoxZero.css("background-color", "var(--secondary)")
     textBoxOne.css("background-color", "var(--secondary)")
