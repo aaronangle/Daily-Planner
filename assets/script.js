@@ -19,24 +19,13 @@ var lockImageSix = $("#lock-image-six")
 var lockImageSeven = $("#lock-image-seven")
 var lockImageEight = $("#lock-image-eight")
 
+var currentTime = $("#currentTime")
 var $lockButton = $(".lock-image")
 
+var now = moment().format("dddd, MMMM Do YYYY, h:mm a");
+currentTime.text(now)
 
 window.onload = onLoadGrabText()
-
-// $scheduleContainer.on("click", function (event) {
-//     var btnNumber = $(event.target).data('index')
-//     if (btnNumber) {
-//         console.log(btnNumber)
-//         inputArray[btnNumber] = []
-//         $userInputRow = $userInputRow + btnNumber
-//         inputArray[btnNumber].push($userInputRow.text())
-//         localStorage.setItem(btnNumber, JSON.stringify(inputArray[btnNumber]))
-//     }
-// })
-
-
-
 
 
 $lockButton.on("click", function () {
