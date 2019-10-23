@@ -42,39 +42,40 @@ window.onload = onLoadGrabText()
 $lockButton.on("click", function () {
     var index = $(event.target).data('index')
 
-    if (index === 0) {
+    if (index === 0 && textBoxZero.text()) {
         var zero = textBoxZero.text()
         localStorage.setItem("textBoxZero", JSON.stringify(zero))
         $(this).attr("src", "assets/padlock.png")
-    } else if (index === 1) {
+        console.log("click")
+    } else if (index === 1 && textBoxOne.text()) {
         var one = textBoxOne.text()
         localStorage.setItem("textBoxOne", JSON.stringify(one))
         $(this).attr("src", "assets/padlock.png")
-    } else if (index === 2) {
+    } else if (index === 2 && textBoxTwo.text()) {
         var two = textBoxTwo.text()
         localStorage.setItem("textBoxTwo", JSON.stringify(two))
         $(this).attr("src", "assets/padlock.png")
-    } else if (index === 3) {
+    } else if (index === 3 && textBoxThree.text()) {
         var three = textBoxThree.text()
         localStorage.setItem("textBoxThree", JSON.stringify(three))
         $(this).attr("src", "assets/padlock.png")
-    } else if (index === 4) {
+    } else if (index === 4 && textBoxFour.text()) {
         var four = textBoxFour.text()
         localStorage.setItem("textBoxFour", JSON.stringify(four))
         $(this).attr("src", "assets/padlock.png")
-    } else if (index === 5) {
+    } else if (index === 5 && textBoxFive.text()) {
         var five = textBoxFive.text()
         localStorage.setItem("textBoxFive", JSON.stringify(five))
         $(this).attr("src", "assets/padlock.png")
-    } else if (index === 6) {
+    } else if (index === 6 && textBoxSix.text()) {
         var six = textBoxSix.text()
         localStorage.setItem("textBoxSix", JSON.stringify(six))
         $(this).attr("src", "assets/padlock.png")
-    } else if (index === 7) {
+    } else if (index === 7 && textBoxSeven.text()) {
         var seven = textBoxSeven.text()
         localStorage.setItem("textBoxSeven", JSON.stringify(seven))
         $(this).attr("src", "assets/padlock.png")
-    } else if (index === 8) {
+    } else if (index === 8 && textBoxEight.text()) {
         var eight = textBoxEight.text()
         localStorage.setItem("textBoxEight", JSON.stringify(eight))
         $(this).attr("src", "assets/padlock.png")
@@ -104,7 +105,7 @@ function onLoadGrabText() {
     if (textBoxThree.text()) {
         lockImageThree.attr("src", "assets/padlock.png")
     }
-    if (textBoxFour.tet()) {
+    if (textBoxFour.text()) {
         lockImageFour.attr("src", "assets/padlock.png")
     }
     if (textBoxFive.text()) {
@@ -121,7 +122,7 @@ function onLoadGrabText() {
     }
 
 }
-console.log(textBoxSeven.text)
+
 
 // var textHolderObj = {
 //     text1: JSON.stringify(inputArray[0]),
