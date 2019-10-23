@@ -9,6 +9,16 @@ var textBoxSix = $("#textBoxSix")
 var textBoxSeven = $("#textBoxSeven")
 var textBoxEight = $("#textBoxEight")
 
+var lockImageZero = $("#lock-image-zero")
+var lockImageOne = $("#lock-image-one")
+var lockImageTwo = $("#lock-image-two")
+var lockImageThree = $("#lock-image-three")
+var lockImageFour = $("#lock-image-four")
+var lockImageFive = $("#lock-image-five")
+var lockImageSix = $("#lock-image-six")
+var lockImageSeven = $("#lock-image-seven")
+var lockImageEight = $("#lock-image-eight")
+
 var $lockButton = $(".lock-image")
 
 
@@ -36,12 +46,10 @@ $lockButton.on("click", function () {
         var zero = textBoxZero.text()
         localStorage.setItem("textBoxZero", JSON.stringify(zero))
         $(this).attr("src", "assets/padlock.png")
-        console.log($(this))
     } else if (index === 1) {
         var one = textBoxOne.text()
         localStorage.setItem("textBoxOne", JSON.stringify(one))
         $(this).attr("src", "assets/padlock.png")
-        console.log($(this))
     } else if (index === 2) {
         var two = textBoxTwo.text()
         localStorage.setItem("textBoxTwo", JSON.stringify(two))
@@ -83,6 +91,34 @@ function onLoadGrabText() {
     textBoxSix.text(JSON.parse(localStorage.getItem("textBoxSix")))
     textBoxSeven.text(JSON.parse(localStorage.getItem("textBoxSeven")))
     textBoxEight.text(JSON.parse(localStorage.getItem("textBoxEight")))
+    if (textBoxZero) {
+        lockImageZero.attr("src", "assets/padlock.png")
+    }
+    if (textBoxOne) {
+        lockImageOne.attr("src", "assets/padlock.png")
+    }
+    if (textBoxTwo) {
+        lockImageTwo.attr("src", "assets/padlock.png")
+    }
+    if (textBoxThree) {
+        lockImageThree.attr("src", "assets/padlock.png")
+    }
+    if (textBoxFour) {
+        lockImageFour.attr("src", "assets/padlock.png")
+    }
+    if (textBoxFive) {
+        lockImageFive.attr("src", "assets/padlock.png")
+    }
+    if (textBoxSix) {
+        lockImageSix.attr("src", "assets/padlock.png")
+    }
+    if (textBoxSeven) {
+        lockImageSeven.attr("src", "assets/padlock.png")
+    }
+    if (textBoxEight) {
+        lockImageEight.attr("src", "assets/padlock.png")
+    }
+
 }
 
 
