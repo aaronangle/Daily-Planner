@@ -1,0 +1,83 @@
+:root{
+    --primary: #f1f1f2;
+    --secondary: #bcbabe;
+    --third: #a1d6e2;
+    --fourth: #1995ad;
+    
+}
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+   
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    min-height: 95vh;
+    height:auto;
+    background-color: white;
+}
+.container{
+    width: 80%;
+    margin: auto;
+
+}
+.heading{
+    text-align: center;
+}
+h1{
+    text-shadow: 2px 2px var(--secondary);
+}
+.schedule-container{
+    height: auto;
+    border: solid 1px black;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.hour-row{
+    height: auto;
+    border: solid 1px black;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+.planner-hour{
+    width: 20%;
+    height: 100px;
+    border-right: solid 1px black;
+    margin: 0;
+    position: relative;
+    background-color: var(--primary);
+}
+.planner-hour p{
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+.event-scheduled{
+    width: 60%;
+    height: 100px;
+    background-color: rgb(248, 248, 248);
+}
+.user-content{
+    height: 95%;
+    width: 95%;
+    margin: auto;
+    margin-top: 5px;
+}
+.lock{
+    width: 20%;
+    height: 100px;
+   border-left: solid 1px black;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+}
+.lock-image{
+    height: 70px;
+    margin: auto;
+}
+.lock-image:hover{
+    cursor: pointer;
+}
