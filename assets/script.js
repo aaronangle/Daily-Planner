@@ -1,4 +1,4 @@
-
+//variables for the text boxes
 var textBoxZero = $("#textBoxZero")
 var textBoxOne = $("#textBoxOne")
 var textBoxTwo = $("#textBoxTwo")
@@ -9,6 +9,7 @@ var textBoxSix = $("#textBoxSix")
 var textBoxSeven = $("#textBoxSeven")
 var textBoxEight = $("#textBoxEight")
 
+//variable for the lock images
 var lockImageZero = $("#lock-image-zero")
 var lockImageOne = $("#lock-image-one")
 var lockImageTwo = $("#lock-image-two")
@@ -24,6 +25,7 @@ var userContent = $(".user-content")
 var currentTime = $("#currentTime")
 var $lockButton = $(".lock-image")
 
+//Getting the current time and day
 var now = moment().format("dddd, MMMM Do YYYY, h:mm a");
 currentTime.text(now)
 var timeStamp = moment().format("H")
@@ -35,7 +37,7 @@ window.onload = onLoadGrabText()
 
 
 
-
+//Puts text in the box and and stores it to local storage
 $lockButton.on("click", function () {
     var index = $(event.target).data('index')
 
@@ -80,6 +82,7 @@ $lockButton.on("click", function () {
     }
 })
 
+//puts text in the box on load and changes the lock image
 function onLoadGrabText() {
     textBoxZero.text(JSON.parse(localStorage.getItem("textBoxZero")))
     textBoxOne.text(JSON.parse(localStorage.getItem("textBoxOne")))
@@ -121,6 +124,8 @@ function onLoadGrabText() {
 
 }
 
+
+//Changes the color of the box based on the time of the day
 if (timeStamp < 9 || timeStamp > 17) {
     userContent.css("background-color", "var(--third)")
 
